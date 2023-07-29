@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    background-color: rgb(1, 1, 1);
+}
+
+.right {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0 0 0;
+}
+
+.right ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.right ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: rgb(167, 241, 216);
+    font-size: 15.9px;
+}
+
+main hr {
+    border: 0;
+    background: rgb(161, 197, 245);
+    height: 1.2px;
+    margin: 40px 84px;
+}
+
+.left {
+    font-size: 1.5rem;
+    color: white;
+    line-height: 50px;
+    padding: 0 80px;
+    margin: 15px 0 0 0;
+}
+
+.left span {
+    font-size: 1.9rem;
+    color: crimson;
+    font-weight: bold;
+}
+
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.firstsection>div {
+    width: 30%;
+}
+
+.leftsection {
+    font-size: 2rem;
+}
+
+.rightsection img {
+    width: 125%;
+}
+
+.red {
+    color: rgb(213, 208, 208);
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 85px;
+}
+
+.blue {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.green {
+    color: rgb(167, 241, 216);
+}
+
+.green span {
+    font-size: 37px;
+    color: crimson;
+}
+
+#element {
+    color: rgb(167, 241, 216);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+
+.btn button a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn button:hover {
+    background-color: crimson;
+}
+
+@media screen and (max-width:600px) {
+
+    nav {
+        height: 50px;
+    }
+
+    nav .left {
+        font-size: 13px;
+        line-height: 30px;
+        padding: 0 30px;
+        margin: 5px 0 0 0;
+    }
+
+    .rightsection {
+        height: 150%;
+        margin-right: 90px;
+    }
+
+    .rightsection img {
+        width: 180%;
+    }
+
+    nav .right {
+        display: none;
+    }
+
+    body {
+        background-image: url(bg3.jpg);
+    }
+
+    .secondsection .me {
+        margin-left: 30px;
+    }
+
+    .red {
+        margin-left: 30px;
+    }
+
+    footer {
+        height: auto;
+    }
+
+}
+
+.blue {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+
+.me {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 85px;
+}
+
+.secondsection .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.secondsection h3 {
+    font-size: 1.8rem;
+}
+
+.container img {
+    height: 12px;
+    width: 12px;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content {
+    padding: 20px;
+    transform: rotateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    transform: rotateY(0px);
+    opacity: 1;
+}
+
+.container .card .content h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.164);
+    pointer-events: none;
+}
+
+.container .card .content h3 {
+    font-size: 1.8rem;
+    color: #ffff;
+    z-index: 1;
+}
+
+.container .card .content p {
+    font-size: 1em;
+    color: #ffff;
+    font-weight: 300;
+    word-spacing: 5px;
+    margin: 50px 20px 0px 20px;
+}
+
+footer {
+    background-color: rgb(8, 8, 8);
+    height: auto;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer h3 {
+    font-size: 16px;
+    margin: 0 20px 0 0;
+}
+
+.footer .con {
+    line-break: 60px;
+    font-size: 13px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer>div {
+    width: 233px;
+}
+
+.footer .con ul {
+    font-size: 15px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.form button {
+    display: block;
+    padding: 2px 4px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+    margin: 30px 20px 150px 0;
+}
+
+.con a {
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+.form button:hover {
+    background-color: crimson;
+}
+
+.form input {
+    margin: 30px 20px 150px 0;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+.con p {
+    display: flex;
+    justify-content: 20px;
+    align-items: center;
+}
+
+.con img {
+    height: 30px;
+}
+
+.con {
+    display: flex;
+    margin: 20px;
+}
